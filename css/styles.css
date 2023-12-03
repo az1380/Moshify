@@ -1,7 +1,7 @@
 :root {
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
-  --color-accet: #ff3400;
+  --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
   --color-body-darker: #5c5577;
@@ -72,7 +72,7 @@ a {
   text-decoration: none;
 }
 .link-arrow {
-  color: var(--color-accet);
+  color: var(--color-accent);
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
@@ -162,6 +162,13 @@ a {
   fill: var(--color-primary);
 }
 
+.icon--white {
+  fill: #fff;
+}
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
 .icon-container {
   align-items: center;
   background-color: #f3f9fa;
@@ -170,6 +177,9 @@ a {
   height: 64px;
   justify-content: center;
   width: 64px;
+}
+.icon-container--accent {
+  background-color: var(--color-accent);
 }
 
 /* buttons */
@@ -200,12 +210,12 @@ a {
   background-color: #00c8eb;
 }
 
-.btn--accet {
-  background-color: var(--color-accet);
+.btn--accent {
+  background-color: var(--color-accent);
   color: white;
 }
 
-.btn--accet:hover {
+.btn--accent:hover {
   background-color: #ec3000;
 }
 
@@ -293,6 +303,7 @@ a {
 .card--secondary .badge--secondary {
   background-color: #02cdf1;
 }
+
 
 /* Plans */
 .plan__name {
@@ -420,5 +431,32 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonial */
+.testimonial {
+  padding: 6rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote, .testimonial .quote__author{
+  font-size: 2.4rem;
+  }
+  .testimonial .quote{
+    margin-left: 6rem;
   }
 }
